@@ -4,7 +4,6 @@
 
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,11 +13,10 @@
   color: white;
 }
 
-.Wrapper {
-  background-color: #000;
+.wrapper {
+  background: #000 ; 
 }
-
-.Input-wrapper g{
+.Input-wrapper {
   display: flex;
   justify-content: space-between;
   width: 200px;
@@ -27,4 +25,7 @@
 .Input-wrapper input {
   border-radius: 4%;
   border: 0;
+  background-color: #ede7fe;
+  width: 160px;
+
 }
