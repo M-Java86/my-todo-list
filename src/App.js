@@ -3,10 +3,15 @@ import { useState} from "react";
 
 function App() {
   const [currentItem, setCurrentItem] = useState(null);
-
-  const onChangehandler = e => {
+  const [itemList, updateitemList] = useState([]);
+   const onChangehandler = e => {
     console.log("current value", e.target.value);
     setCurrentItem(e.target.value);
+  };
+
+  const addItemToList = () => {
+    updateitemList([...itemList, {item :currentItem, key: Date.now()}]);
+    currentItem("");
   };
   return (
     <div className="App">
@@ -14,7 +19,7 @@ function App() {
         <div className="Wrapper">
           <div className="Input-wrapper">
             <input value={currentItem} onChange={onChangehandler} />
-            <button>+</button>
+            <button onClick={addItemToList}>+</button>
           </div>
         </div>
       </header>
