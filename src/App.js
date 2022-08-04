@@ -1,5 +1,6 @@
 import './App.css';
 import { useState} from "react";
+import List from './List';
 
 function App() {
   const [currentItem, setCurrentItem] = useState(null);
@@ -21,6 +22,7 @@ function App() {
             <input value={currentItem} onChange={onChangehandler} />
             <button onClick={addItemToList}>+</button>
           </div>
+          <List itemList={itemList} />
         </div>
       </header>
     </div>
