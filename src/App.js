@@ -6,6 +6,7 @@ function App() {
 
   const onChangehandler = e => {
     console.log("current value", e.target.value);
+    setCurrentItem(e.target.value);
   };
   return (
     <div className="App">
