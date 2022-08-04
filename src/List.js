@@ -1,19 +1,19 @@
 import "./List.css";
 
-function List(props) {
+function List({ itemList, updateitemList }) {
     const deleteItemFromList = key => {
-    const newList = props.itemList.filter(itemObj => {
+    const newList = itemList.filter(itemObj => {
        return itemObj.key !== key;
 
     });
-    props.updateitemList(newList);
+     updateitemList(newList);
 
 };
   return (
     <div>
-      {props.itemList.map((itemObj) => {
+     {itemList.map(itemObj => {
         return (
-          <div className="Item">
+          <div key={itemObj.key} className="Item">
            <p>{itemObj.item}</p>
             <button onClick={() => deleteItemFromList(itemObj.key)}>x</button>
           </div>
