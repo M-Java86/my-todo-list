@@ -14,8 +14,17 @@
   color: white;
 }
 
-.Input-wrapper{
+.Wrapper {
+  background-color: #000;
+}
+
+.Input-wrapper g{
   display: flex;
   justify-content: space-between;
   width: 200px;
+}
+
+.Input-wrapper input {
+  border-radius: 4%;
+  border: 0;
 }
