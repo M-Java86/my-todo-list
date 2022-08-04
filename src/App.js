@@ -8,6 +8,7 @@ function App() {
         <div className="wrapper">
           <div className="Input-wrapper">
             <input />
+            <button>+</button>
           </div>
         </div>
       </header>
